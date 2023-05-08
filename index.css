@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #166386, #19376d, #192f6d);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+.headerText {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+
+.nameSurname {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.bd {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.nosaukums {
+  padding-top: 180px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 12rem;
+}
+
+.blue {
+  position: absolute;
+  z-index: -1;
+  padding: 5%;
+  animation: blue 5s infinite;
+}
+
+.green {
+  position: absolute;
+  z-index: -1;
+  padding: 23%;
+  padding-left: 40%;
+  animation: green 4s infinite;
+}
+
+.red {
+  position: absolute;
+  z-index: -1;
+  padding-left: 80%;
+  animation: red 8s infinite;
+}
+
+.button {
+  margin: auto;
+  padding-top: 15rem;
+  width: 150px;
+  height: 25px;
+}
+
+#startBtn {
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  border-radius: 2px;
+  padding: 10px;
+  border: greenyellow solid 2px;
+  text-align: center;
+  color: greenyellow;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blue {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes green {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes red {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.r {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+.main #d3,
+.main #cytoscape,
+.main #vis {
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+.main #d3:hover {
+  border-radius: 2px;
+  padding: 10px;
+  border: greenyellow solid 2px;
+  text-align: center;
+  color: greenyellow;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+.main #cytoscape:hover {
+  border-radius: 2px;
+  padding: 10px;
+  border: greenyellow solid 2px;
+  text-align: center;
+  color: greenyellow;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+.main #vis:hover {
+  border-radius: 2px;
+  padding: 10px;
+  border: greenyellow solid 2px;
+  text-align: center;
+  color: greenyellow;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+
+.graphs {
+  padding-top: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+figcaption {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}/*# sourceMappingURL=index.css.map */

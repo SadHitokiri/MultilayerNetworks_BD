@@ -1,0 +1,8 @@
+<svg width="310" height="267" viewBox="0 0 310 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-2.5" x2="120.056" y2="-2.5" transform="matrix(0.954353 -0.4252 0.488429 0.819225 71.4323 123.079)" stroke="#ADADAD" stroke-opacity="0.2" stroke-width="5"/>
+<line y1="-2.5" x2="111.235" y2="-2.5" transform="matrix(-0.471351 -0.826774 0.962945 -0.410247 242.107 167.654)" stroke="#ADADAD" stroke-opacity="0.2" stroke-width="5"/>
+<ellipse cx="25.9318" cy="25.968" rx="25.9318" ry="25.968" transform="matrix(1.0643 -0.100419 0.116002 0.91876 24.7212 103.343)" fill="#0F00B8" fill-opacity="0.9"/>
+<path d="M82.3998 122.044C84.0315 134.967 73.2351 146.586 58.2871 147.997C43.3391 149.407 29.8974 140.075 28.2657 127.151C26.634 114.228 37.4304 102.609 52.3784 101.199C67.3264 99.7884 80.7681 109.12 82.3998 122.044Z" stroke="#0F00B8" stroke-opacity="0.9"/>
+<ellipse cx="25.8323" cy="26.0669" rx="25.8323" ry="26.0669" transform="matrix(0.735826 -0.67717 0.776299 0.630365 146.217 73.3263)" fill="#0F00B8" fill-opacity="0.9"/>
+<ellipse cx="25.8323" cy="26.0669" rx="25.8323" ry="26.0669" transform="matrix(0.735826 -0.67717 0.776299 0.630365 202.863 168.716)" fill="#0F00B8" fill-opacity="0.9"/>
+</svg>
