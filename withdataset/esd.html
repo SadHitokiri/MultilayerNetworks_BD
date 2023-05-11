@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Multilayer Network Example</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style type="text/css">
+    #mynetwork {
+      width: 800px;
+      height: 600px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div id="mynetwork"></div>
+
+  <script type="text/javascript">
+
+    var numNodes = 1000;
+    var numLayers = 10;
+    var numEdges = 500;
+
+ 
+    var nodes = [];
+    for (var l = 0; l < numLayers; l++) {
+      var layerNodes = [];
+      for (var n = 0; n < numNodes; n++) {
+        layerNodes.push({ id: l * numNodes + n + 1, label: 'Node ' + (l * numNodes + n + 1) });
+      }
+      nodes.push(layerNodes);
+    }
+
+ 
+    var edges = [];
+    for (var l = 0; l < numLayers; l++) {
+      var layerEdges = [];
+      for (var e = 0; e < numEdges; e++) {
+       
+        var sourceId = Math.floor(Math.random() * numNodes) + l * numNodes + 1;
+        var targetId = Math.floor(Math.random() * numNodes) + l * numNodes + 1;
+        layerEdges.push({ from: sourceId, to: targetId });
+      }
+      edges.push(layerEdges);
+    }
+
+  
+    var data = {
+      layers: []
+    };
+    for (var l = 0; l < numLayers; l++) {
+      data.layers.push({
+        nodes: nodes[l],
+        edges: edges[l]
+      });
+    }
+
+   
+    var container = document.getElementById('mynetwork');
+    var options = {};
+    var network = new vis.Network(container, data, options);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(-45deg, #166386, #19376d, #192f6d);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  overflow: hidden;
+}
+
+svg {
+  background-color: whitesmoke;
+  margin: auto;
+}
+
+#svgContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
