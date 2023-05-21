@@ -80,28 +80,28 @@
       var nodes2 = cy.add([]);
       var nodes3 = cy.add([]);
 
-      // Generate 10 random nodes with IDs "a1" to "a499" in the "node1" layer
+      // Ģenere 500 virsotnes viena slāņa ar nosaukumu .node1
       for (var i = 1; i <= 500; i++) {
         var nodeId = "a" + i;
         var node = { data: { id: nodeId, parent: "a" }, classes: "node1" };
         nodes1.push(cy.add(node));
       }
 
-      // Generate 10 random nodes with IDs "b1" to "b249" in the "node2" layer
+      // Ģenere 250 virsotnes viena slāņa ar nosaukumu .node2
       for (var i = 1; i <= 250; i++) {
         var nodeId = "b" + i;
         var node = { data: { id: nodeId, parent: "b" }, classes: "node2" };
         nodes2.push(cy.add(node));
       }
 
-      // Generate 10 random nodes with IDs "c1" to "c249" in the "node3" layer
+      // Ģenere 250 virsotnes viena slāņa ar nosaukumu .node3
       for (var i = 1; i <= 250; i++) {
         var nodeId = "c" + i;
         var node = { data: { id: nodeId, parent: "c" }, classes: "node3" };
         nodes3.push(cy.add(node));
       }
 
-      // Add 500 random edges
+      // Veido 500 šķautnes
       var nodes = cy.nodes();
       var nodeCount = nodes.length;
 
@@ -124,7 +124,7 @@
 
       var layout = cy.layout({
         name: "random",
-        fit: false, // Adjust the spacing between nodes
+        fit: false, // Distance starp virsotnes
       });
 
       layout.run();

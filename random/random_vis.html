@@ -29,6 +29,7 @@
     </style>
     <div id="graph"></div>
     <script>
+      //ģenere 1000 virsotnes + pievieno nosaukums
       var nodes = new vis.DataSet();
       for (var i = 0; i <= 1000; i++) {
         nodes.add({
@@ -38,6 +39,7 @@
         });
       }
 
+      // ģenere 500 šķautnes ar random savienojumiem
       var edges = new vis.DataSet();
       for (var i = 1; i <= 500; i++) {
         var from = Math.floor(Math.random() * 1000) + 1;
@@ -51,6 +53,7 @@
         }
       }
 
+      // ģenere random slāni un pievieno virsotnes
       var groups = ["group1", "group2", "group3"];
       var layerColors = ["blue", "green", "red"];
       var layers = {
