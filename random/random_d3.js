@@ -1,22 +1,22 @@
 // Ģenere random dati
-const data = [];
-const layerCount = 3;
+let data = [];
+let layerCount = 3;
 
 for (let layerIndex = 1; layerIndex <= layerCount; layerIndex++) {
-  const layer = {
+  let layer = {
     layer: layerIndex,
     nodes: [],
     links: [],
   };
 
-  const nodeCount = Math.floor(1000 / layerCount); // virsotnes sk. un sadala slāņos
-  const startNodeId = (layerIndex - 1) * nodeCount + 1;
+  let nodeCount = Math.floor(1200/ layerCount); // virsotnes sk. un sadala slāņos
+  let startNodeId = (layerIndex - 1) * nodeCount + 1;
 
   // cikls, kas izveido virsotnes un pievieno id.
   for (let nodeIndex = 1; nodeIndex <= nodeCount; nodeIndex++) {
-    const nodeId = startNodeId + nodeIndex - 1;
+    let nodeId = startNodeId + nodeIndex - 1;
 
-    const node = {
+    let node = {
       id: nodeId,
       x: Math.floor(Math.random() * 400) + 50, // random virsotne koordinati x asi (no 50 līdz 450)
       y: Math.floor(Math.random() * 300) + 50, // random virsotne koordinati y asi (no 50 līdz 350)
@@ -26,10 +26,10 @@ for (let layerIndex = 1; layerIndex <= layerCount; layerIndex++) {
 
     if (layerIndex > 1) {
       // pievieno savienojumi starp virsotnes
-      const randomNodeIndex = Math.floor(
+      let randomNodeIndex = Math.floor(
         Math.random() * data[layerIndex - 2].nodes.length
       );
-      const randomNode = data[layerIndex - 2].nodes[randomNodeIndex];
+      let randomNode = data[layerIndex - 2].nodes[randomNodeIndex];
 
       layer.links.push({
         source: nodeId,
@@ -42,7 +42,7 @@ for (let layerIndex = 1; layerIndex <= layerCount; layerIndex++) {
 }
 
 // Izveidojam force simulation, lai norādīt savienojumu garumu
-const simulation = d3
+let simulation = d3
   .forceSimulation()
   .force(
     "link",
@@ -55,15 +55,15 @@ const simulation = d3
   .force("center", d3.forceCenter(450, 425)); //Vairākslāņu grafu pozicija
 
 // Vairākslāņu grafu demonstrēšana svg konteinerā
-const svg = d3.select("svg");
-const layerSelection = svg // izveidojam slāņi
+let svg = d3.select("svg");
+let layerSelection = svg // izveidojam slāņi
   .selectAll(".layer")
   .data(data)
   .enter()
   .append("g")
   .attr("class", "layer");
 
-const linksSelection = layerSelection // izveidojam šķautnes
+let linksSelection = layerSelection // izveidojam šķautnes
   .selectAll("line")
   .data((d) => d.links)
   .enter()
@@ -71,7 +71,7 @@ const linksSelection = layerSelection // izveidojam šķautnes
   .attr("stroke", "black")
   .attr("stroke-width", 0.5);
 
-const nodesSelection = layerSelection
+let nodesSelection = layerSelection
   // izveidojam virsotnes
   .selectAll("circle")
   .data((d) => d.nodes)
@@ -80,14 +80,14 @@ const nodesSelection = layerSelection
   .attr("r", 6)
   .attr("fill", (d) => {
     // ģenere random virsotnes krāsas
-    const colors = ["blue", "green", "red"];
+    let colors = ["blue", "green", "red"];
     return colors[Math.floor(Math.random() * colors.length)];
   });
 
 nodesSelection
   .on("mouseover", (event, d) => {
     // Informacija par virsotne un slāņi
-    const layer = data.find((layer) => layer.nodes.includes(d));
+    let layer = data.find((layer) => layer.nodes.includes(d));
     // tooltip izmantots, lai paradīt tekstu ar dati
     d3.select("#tooltip")
       .style("visibility", "visible")
@@ -104,7 +104,7 @@ nodesSelection
     d3.select("#tooltip").style("visibility", "hidden");
   });
 
-const drag = d3 //funkcija, lai ar kursoru pārbīdīt virsotnes
+let drag = d3 //funkcija, lai ar kursoru pārbīdīt virsotnes
   .drag()
   .on("start", (event, d) => {
     if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -137,7 +137,7 @@ simulation.on("tick", () => {
 });
 
 // pārvietošanās grafā
-const zoom = d3.zoom().on("zoom", (event) => {
+let zoom = d3.zoom().on("zoom", (event) => {
   layerSelection.attr("transform", event.transform);
 });
 

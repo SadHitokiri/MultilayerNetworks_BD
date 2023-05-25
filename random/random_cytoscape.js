@@ -1,4 +1,4 @@
-var cy = cytoscape({
+let cy = cytoscape({
   container: document.getElementById("cy"),
   elements: [
     { data: { id: "a" } },
@@ -43,44 +43,43 @@ var cy = cytoscape({
   ],
 });
 
-var nodes1 = cy.add([]);
-var nodes2 = cy.add([]);
-var nodes3 = cy.add([]);
+let nodes1 = cy.add([]);
+let nodes2 = cy.add([]);
+let nodes3 = cy.add([]);
 
-// Ģenere 500 virsotnes viena slāņa ar nosaukumu .node1
-for (var i = 1; i <= 500; i++) {
-  var nodeId = "a" + i;
-  var node = { data: { id: nodeId, parent: "a" }, classes: "node1" };
+// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node1
+for (let i = 1; i <= 400; i++) {
+  let nodeId = "a" + i;
+  let node = { data: { id: nodeId, parent: "a" }, classes: "node1" };
   nodes1.push(cy.add(node));
 }
 
-// Ģenere 250 virsotnes viena slāņa ar nosaukumu .node2
-for (var i = 1; i <= 250; i++) {
-  var nodeId = "b" + i;
-  var node = { data: { id: nodeId, parent: "b" }, classes: "node2" };
+// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node2
+for (let i = 1; i <= 400; i++) {
+  let nodeId = "b" + i;
+  let node = { data: { id: nodeId, parent: "b" }, classes: "node2" };
   nodes2.push(cy.add(node));
 }
 
-// Ģenere 250 virsotnes viena slāņa ar nosaukumu .node3
-for (var i = 1; i <= 250; i++) {
-  var nodeId = "c" + i;
-  var node = { data: { id: nodeId, parent: "c" }, classes: "node3" };
+// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node3
+for (let i = 1; i <= 400; i++) {
+  let nodeId = "c" + i;
+  let node = { data: { id: nodeId, parent: "c" }, classes: "node3" };
   nodes3.push(cy.add(node));
 }
 
-// Veido 500 šķautnes
-var nodes = cy.nodes();
-var nodeCount = nodes.length;
+// Veido 600 šķautnes
+let nodes = cy.nodes();
+let nodeCount = nodes.length;
 
-for (var i = 0; i < 500; i++) {
-  var sourceNode = nodes[Math.floor(Math.random() * nodeCount)];
-  var targetNode = nodes[Math.floor(Math.random() * nodeCount)];
+for (let i = 1; i <= 600; i++) {
+  let sourceNode = nodes[Math.floor(Math.random() * nodeCount)];
+  let targetNode = nodes[Math.floor(Math.random() * nodeCount)];
 
   if (sourceNode.id() !== targetNode.id()) {
     cy.add([
       {
         data: {
-          id: sourceNode.id() + "-" + targetNode.id(),
           source: sourceNode.id(),
           target: targetNode.id(),
         },
@@ -89,11 +88,11 @@ for (var i = 0; i < 500; i++) {
   }
 }
 
-var layout = cy.layout({
+let layout = cy.layout({
   name: "random",
   spacingFactor: 2, // Distance starp virsotnes
 });
 
 layout.run();
 
-var animation = cy.animate({ pan: { x: 400, y: 250 }, zoom: 1 });
+let animation = cy.animate({ pan: { x: 400, y: 250 }, zoom: 1 });

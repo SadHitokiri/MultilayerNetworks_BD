@@ -1,6 +1,6 @@
-//ģenere 1000 virsotnes + pievieno nosaukums
-var nodes = new vis.DataSet();
-for (var i = 0; i <= 1000; i++) {
+//ģenere 1200 virsotnes + pievieno nosaukums
+let nodes = new vis.DataSet();
+for (let i = 1; i <= 1200; i++) {
   nodes.add({
     id: i,
     label: "Node " + i,
@@ -8,11 +8,11 @@ for (var i = 0; i <= 1000; i++) {
   });
 }
 
-// ģenere 500 šķautnes ar random savienojumiem
-var edges = new vis.DataSet();
-for (var i = 1; i <= 500; i++) {
-  var from = Math.floor(Math.random() * 1000) + 1;
-  var to = Math.floor(Math.random() * 1000) + 1;
+// ģenere 600 šķautnes ar random savienojumiem
+let edges = new vis.DataSet();
+for (let i = 1; i <= 600; i++) {
+  let from = Math.floor(Math.random() * 1200) + 1;
+  let to = Math.floor(Math.random() * 1200) + 1;
   if (from != to) {
     edges.add({
       id: i,
@@ -23,9 +23,9 @@ for (var i = 1; i <= 500; i++) {
 }
 
 // ģenere random slāni un pievieno virsotnes
-var groups = ["group1", "group2", "group3"];
-var layerColors = ["blue", "green", "red"];
-var layers = {
+let groups = ["group1", "group2", "group3"];
+let layerColors = ["blue", "green", "red"];
+let layers = {
   groups: {},
   nodes: {
     font: {
@@ -33,15 +33,16 @@ var layers = {
     },
   },
 };
-for (var i = 0; i < groups.length; i++) {
-  var group = groups[i];
-  var color = layerColors[Math.floor(Math.random() * 3)];
+
+for (let i = 0; i < groups.length; i++) {
+  let group = groups[i];
+  let color = layerColors[Math.floor(Math.random() * 3)];
   layers.groups[group] = { color: color };
 }
 
-var data = {
+let data = {
   nodes: nodes,
   edges: edges,
 };
-var container = document.getElementById("graph");
-var network = new vis.Network(container, data, layers);
+let container = document.getElementById("graph");
+let network = new vis.Network(container, data, layers);
