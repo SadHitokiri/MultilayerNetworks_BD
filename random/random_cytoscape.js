@@ -43,30 +43,28 @@ let cy = cytoscape({
   ],
 });
 
-let nodes1 = cy.add([]);
-let nodes2 = cy.add([]);
-let nodes3 = cy.add([]);
+// Veido 1200 virsotnes
 
-// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node1
+let nodes1 = [];
+let nodes2 = [];
+let nodes3 = [];
+
 for (let i = 1; i <= 400; i++) {
-  let nodeId = "a" + i;
-  let node = { data: { id: nodeId, parent: "a" }, classes: "node1" };
-  nodes1.push(cy.add(node));
+  let nodeId = i.toString();
+
+  let nodeA = { data: { id: "a" + nodeId, parent: "a" }, classes: "node1" };
+  let nodeB = { data: { id: "b" + nodeId, parent: "b" }, classes: "node2" };
+  let nodeC = { data: { id: "c" + nodeId, parent: "c" }, classes: "node3" };
+
+  nodes1.push(nodeA);
+  nodes2.push(nodeB);
+  nodes3.push(nodeC);
 }
 
-// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node2
-for (let i = 1; i <= 400; i++) {
-  let nodeId = "b" + i;
-  let node = { data: { id: nodeId, parent: "b" }, classes: "node2" };
-  nodes2.push(cy.add(node));
-}
+cy.add(nodes1);
+cy.add(nodes2);
+cy.add(nodes3);
 
-// Ģenere 400 virsotnes viena slāņa ar nosaukumu .node3
-for (let i = 1; i <= 400; i++) {
-  let nodeId = "c" + i;
-  let node = { data: { id: nodeId, parent: "c" }, classes: "node3" };
-  nodes3.push(cy.add(node));
-}
 
 // Veido 600 šķautnes
 let nodes = cy.nodes();

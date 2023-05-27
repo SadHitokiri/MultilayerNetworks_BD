@@ -24,7 +24,7 @@ for (let i = 1; i <= 600; i++) {
 
 // ģenere random slāni un pievieno virsotnes
 let groups = ["group1", "group2", "group3"];
-let layerColors = ["blue", "green", "red"];
+let layerColors = ["blue", "yellow", "red"];
 let layers = {
   groups: {},
   nodes: {
