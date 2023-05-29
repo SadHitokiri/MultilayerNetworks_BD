@@ -1,13 +1,13 @@
 const startBtn = document.getElementById("startBtn");
-const h1Element = document.querySelector("h1");
+const endElement = document.getElementById("demoversion");
 
 startBtn.addEventListener("click", function () {
-  h1Element.scrollIntoView({ behavior: "smooth" });
+  endElement.scrollIntoView({ behavior: "smooth" });
 });
 
 const d3 = document.getElementById("d3");
 d3.addEventListener("click", function () {
-  window.location.href = "./d3.js_demo/d3.html";
+  window.location.href = "d3.js_demo/d3.html";
 });
 
 const cytoscape = document.getElementById("cytoscape");

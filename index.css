@@ -6,7 +6,6 @@
 
 body {
   width: 100%;
-  height: 100vh;
   background: linear-gradient(-45deg, #166386, #19376d, #192f6d);
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
@@ -20,17 +19,17 @@ body {
 .headerText {
   display: flex;
   justify-content: space-around;
-  padding-top: 25px;
+  padding-top: 5%;
 }
 
 .nameSurname {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Inter", sans-serif;
 }
 
 .bd {
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
   font-family: "Inter", sans-serif;
 }
@@ -74,7 +73,7 @@ body {
 
 .button {
   margin: auto;
-  padding-top: 15rem;
+  padding-top: 20%;
   width: 150px;
   height: 25px;
 }
@@ -209,4 +208,9 @@ figcaption {
   color: #fff;
   font-family: "Inter", sans-serif;
   font-weight: 100;
-}/*# sourceMappingURL=index.css.map */
+}
+
+#demoversion {
+  width: 100%;
+  height: 100vh;
+}
