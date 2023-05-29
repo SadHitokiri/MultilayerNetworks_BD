@@ -153,15 +153,13 @@ body {
   text-align: center;
 }
 
-.main {
+.demo, .random  {
   width: 100%;
   display: flex;
   justify-content: space-around;
   padding-bottom: 50px;
 }
-.main #d3,
-.main #cytoscape,
-.main #vis {
+.demoBtn {
   border: white solid 2px;
   border-radius: 10px;
   padding: 10px;
@@ -170,25 +168,7 @@ body {
   font-family: "Inter", sans-serif;
   cursor: pointer;
 }
-.main #d3:hover {
-  border-radius: 2px;
-  padding: 10px;
-  border: greenyellow solid 2px;
-  text-align: center;
-  color: greenyellow;
-  font-family: "Inter", sans-serif;
-  transition: 0.5s;
-}
-.main #cytoscape:hover {
-  border-radius: 2px;
-  padding: 10px;
-  border: greenyellow solid 2px;
-  text-align: center;
-  color: greenyellow;
-  font-family: "Inter", sans-serif;
-  transition: 0.5s;
-}
-.main #vis:hover {
+.demoBtn:hover {
   border-radius: 2px;
   padding: 10px;
   border: greenyellow solid 2px;
