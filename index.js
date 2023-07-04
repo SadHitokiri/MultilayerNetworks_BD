@@ -1,10 +1,6 @@
 let startBtn = document.getElementById("startBtn");
 let endElement = document.getElementById("demoversion");
 
-startBtn.addEventListener("click", function () {
-  endElement.scrollIntoView({ behavior: "smooth" });
-});
-
 let d3 = document.getElementById("d3");
 d3.addEventListener("click", function () {
   window.location.href = "/demo/d3.js_demo/d3.html";
