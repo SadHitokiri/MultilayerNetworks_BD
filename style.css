@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  padding: 50px;
+  overflow: hidden;
+}
+section .chart-template {
+  width: 500px;
+  margin-top: 2.5rem;
+}
+section .info-demo {
+  display: flex;
+  justify-content: space-evenly;
+}
+section .info-demo .btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+section .info-demo .btns button {
+  width: 250px;
+  height: 150px;
+  font-size: 32px;
+}
+section h1 {
+  font-size: 72px;
+  text-align: center;
+  color: #fff;
+}
+section p {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4FFFD;
+}
+#hero h1 {
+  color: #000;
+}
+#hero p {
+  color: #000;
+}
+
+#d3js {
+  background-color: #1e1e20;
+}
+#d3js span {
+  color: hsl(20, 85%, 57%);
+}
+
+#cytoscapejs {
+  background-color: #000;
+}
+#cytoscapejs span {
+  color: yellow;
+}
+
+#visjs {
+  background-color: #465362;
+}/*# sourceMappingURL=style.css.map */

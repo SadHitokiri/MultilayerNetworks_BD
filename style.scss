@@ -1,0 +1,95 @@
+$d3-color: #1e1e20;
+$hero-color: #F4FFFD;
+$cyto-color: #000;
+$vis-color: #465362;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    padding: 50px;
+
+    overflow: hidden;
+
+    .chart-template {
+        width: 500px;
+        margin-top: 2.5rem;
+    }
+
+    .info-demo {
+        display: flex;
+        justify-content: space-evenly;
+
+        .btns {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            button {
+                width: 250px;
+                height: 150px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 72px;
+        text-align: center;
+        color: #fff;
+
+
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+
+}
+
+#hero {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $hero-color;
+
+    h1 {
+        color: #000;
+    }
+
+    p {
+        color: #000;
+    }
+}
+
+#d3js {
+    background-color: $d3-color;
+
+    span {
+        color: hsl(20 85% 57%);
+    }
+
+}
+
+#cytoscapejs {
+    background-color: $cyto-color;
+
+    span {
+        color: yellow;
+    }
+}
+
+
+#visjs {
+    background-color: $vis-color;
+}
