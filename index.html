@@ -25,7 +25,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#d3js">D3.js</a>
                         <a class="nav-link" href="#cytoscapejs">Cytoscape.js</a>
-                        <a class="nav-link" href="visjs">Vis.js</a>
+                        <a class="nav-link" href="#visjs">Vis.js</a>
                     </div>
                 </div>
             </div>
@@ -72,8 +72,8 @@
             </div>
 
             <div class="btns">
-                <button type="button" class="btn btn-outline-danger">DEMO</button>
-                <button type="button" class="btn btn-outline-danger">Experiment</button>
+                <button type="button" onclick="d3Demo()" class="btn btn-outline-danger">DEMO</button>
+                <button type="button" onclick="d3Experiment()" class="btn btn-outline-danger">Experiment</button>
             </div>
 
         </div>
@@ -90,8 +90,8 @@
         <div class="info-demo">
 
             <div class="btns">
-                <button type="button" class="btn btn-outline-warning">DEMO</button>
-                <button type="button" class="btn btn-outline-warning">Experiment</button>
+                <button type="button" onclick="cytoDemo()" class="btn btn-outline-warning">DEMO</button>
+                <button type="button" onclick="cytoExperiment()" class="btn btn-outline-warning">Experiment</button>
             </div>
 
             <div class="chart-template">
@@ -103,7 +103,22 @@
         </div>
     </section>
     <section id="visjs">
-        <h1 class="section-heading">About Vis.js</h1>
+        <h1 class="section-heading">About <span>Vis.js</span></h1>
+        <p>Little bit about results and visualizations Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+            quos rem delectus hic asperiores sequi sed labore minus incidunt. Fugit rem, id quas veniam autem
+            repudiandae laudantium molestiae amet nemo!</p>
+
+        <div class="info-demo">
+            <div class="chart-template">
+                <canvas id="visChart_doughunt"></canvas>
+            </div>
+
+            <div class="btns">
+                <button type="button" onclick="visDemo()" class="btn btn-outline-info">DEMO</button>
+                <button type="button" onclick="visExperiment()" class="btn btn-outline-info">Experiment</button>
+            </div>
+
+
     </section>
     <footer>
 
@@ -122,6 +137,7 @@
         </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scripts/chart.js"></script>
+    <script src="./scripts/buttons.js"></script>
 </body>
 
 </html>

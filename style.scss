@@ -30,11 +30,13 @@ section {
             flex-direction: column;
             justify-content: space-evenly;
 
+
             button {
                 width: 250px;
                 height: 150px;
                 font-size: 32px;
             }
+
         }
     }
 
@@ -52,7 +54,10 @@ section {
         color: #fff;
     }
 
+
+
 }
+
 
 #hero {
     height: 100vh;
@@ -92,4 +97,8 @@ section {
 
 #visjs {
     background-color: $vis-color;
+
+    span {
+        color: skyblue;
+    }
 }
