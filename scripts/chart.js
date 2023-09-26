@@ -82,6 +82,82 @@ const visDataDoughunt = {
     },]
 }
 
+const totalData = {
+
+    labels: ['Loading D3.js',
+        'Loading Cytoscape.js',
+        'Loading Vis.js',
+        'Scripting D3.js',
+        'Scripting Cytoscape.js',
+        'Scripting Vis.js',
+        'Rendering D3.js',
+        'Rendering Cytoscape.js',
+        'Rendering Vis.js',
+        'Painting D3.js',
+        'Painting Cytoscape.js',
+        'Painting Vis.js',
+        'System D3.js',
+        'System Cytoscape.js',
+        'System Vis.js',
+        'Idle D3.js',
+        'Idle Cytoscape.js',
+        'Idle Vis.js',
+        'Total D3.js',
+        'Total Cytoscape.js',
+        'Total Vis.js'],
+    datasets: [{
+        label: 'ms',
+        data: [5, 4, 3, 3595, 1653, 14595, 1339, 6, 3, 248, 12, 0, 51, 42, 15, 21, 4740, 40, 5259, 6457, 14657],
+        backgroundColor: [
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+            'rgba(256, 107, 3, 0.2)',
+            'rgba(255, 255, 0, 0.2)',
+            'rgba(0, 255, 255, 0.2)',
+        ],
+        borderColor: [
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+            'rgb(0, 0, 0)',
+        ],
+        borderWidth: 1
+    }]
+};
+
 //CONFIG
 const d3ConfigDoughunt = {
     type: 'doughnut',
@@ -129,6 +205,24 @@ const visConfigDoughunt = {
     }
 };
 
+const totalConfig = {
+    type: 'bar',
+    data: totalData,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Total Results'
+            },
+        }
+
+    },
+};
 
 //RENDER
 const d3Doughunt = new Chart(
@@ -146,5 +240,10 @@ const visDouhunt = new Chart(
     document.getElementById('visChart_doughunt'),
     visConfigDoughunt
 
+)
+
+const totalBar = new Chart(
+    document.getElementById('totalBar'),
+    totalConfig
 )
 

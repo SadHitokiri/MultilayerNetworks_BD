@@ -1,7 +1,8 @@
 $d3-color: #1e1e20;
 $hero-color: #F4FFFD;
 $cyto-color: #000;
-$vis-color: #465362;
+$vis-color: #1a1f25;
+$footer: #cacacc;
 
 * {
     padding: 0;
@@ -101,4 +102,8 @@ section {
     span {
         color: skyblue;
     }
+}
+
+footer {
+    background-color: $footer;
 }
